@@ -2,18 +2,21 @@
 
 /**
  * print_diagonal - draws a diagonal line on the terminal
- * @n: number of times the character \ should be printed
+i* @n: number of times the character \ should be printed
  */
-void print_most_numbers(void)
+void print_diagonal(int n)
 {
-	int i;
+	int i, p;
 
-	for (i = 0; i < 10; i++)
+	for (i = 0; i < n; i++)
 	{
-		if (i != 2 && i != 4)
+		for (p = 0; p < i; p++)
 		{
-			_putchar(i + '0');
+			_putchar(' ');
 		}
+		_putchar(92);
+		if (i < (n - 1))
+			_putchar('\n');
 	}
 
 	_putchar('\n');
