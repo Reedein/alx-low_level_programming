@@ -4,21 +4,17 @@ include "main.h"
  * print_diagonal - draws a diagonal line on the terminal
  * @n: number of times the character \ should be printed
  */
-
-void print_diagonal(int n)
+void print_most_numbers(void)
 {
-	int i, j;
+	int i;
 
-	if (n <= 0)
-		_putchar('\n');
-	for (i = 0; i < n; i++)
+	for (i = 0; i < 10; i++)
 	{
-		for (j = 0; j < i; j++)
+		if (i != 2 && i != 4)
 		{
-			_putchar(' ');
+			_putchar(i + '0');
 		}
-		_putchar('\\');
-		_putchar('\n');
 	}
 
+	_putchar('\n');
 }
